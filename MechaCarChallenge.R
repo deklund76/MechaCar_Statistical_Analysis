@@ -1,12 +1,12 @@
 library(dplyr)
 
-mecha_car <- read.csv('../MechaCar_mpg.csv')
+mecha_car <- read.csv('./MechaCar_mpg.csv')
 
 summary(lm(mpg ~ vehicle_length + vehicle_weight + 
      spoiler_angle + ground_clearance +
      AWD, data = mecha_car))
 
-sus_coil <- read.csv('../Suspension_Coil.csv')
+sus_coil <- read.csv('./Suspension_Coil.csv')
 
 total_summary <- sus_coil %>% 
   summarize(Mean=mean(PSI), Median=median(PSI),
